@@ -1,0 +1,21 @@
+puts   		Tell it to print or show whatever is in quotations afterwards
+#		      comments things out/ also used when telling ruby to show a variable
++-*/		   Actual math functions
+< or > 		Ruby will give a true or false designation in response
+%		      Modulus-divides but gives remainder as opposed to dividend
+=		      Helps assign variables
+#{}		    Calls previously assigned variable
+%d		     Tells to fill in text variable, at the end of line % followed by what will be filled in
+%s		     Same as above, but fills in integer instead of text
+[]		     used to make a string
+print		  about the same as puts but no line break
+\n		     creates line breaks
+<<		     there’s more to it, but for now: it shows the beginning of a block. followed by a 		word in caps. Maintains the format of the text block.
+\t		     creates a tab in
+\		      clarifier, tells ruby that whatever follows is only a character to show without a function
+			         ex: \\ cat \\  reads as \ cat \
+gets
+.chomp()	Asks for input.
+require   adds features to script (like ruby gems)
+argument
+STDIN

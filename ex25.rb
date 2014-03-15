@@ -19,7 +19,7 @@ module Ex25
   def self.print_last_word(words)
     # Prints the last word after popping it off the end.
     word = words.pop()
-    puts words
+    puts word
   end
 
   def self.sort_sentence(sentence)
@@ -28,7 +28,7 @@ module Ex25
     sort_words(words)
   end
 
-  def self. print_first_and_last(sentence)
+  def self.print_first_and_last(sentence)
     #Prints the first and last words of the sentence.
     words = break_words(sentence)
     print_first_word(words)

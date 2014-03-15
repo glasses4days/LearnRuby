@@ -23,7 +23,7 @@ def secret_formula(started)
   jelly_beans = started * 500
   jars = jelly_beans / 1000
   crates = jars / 100
-  return jelly_beans, jars, crates
+  return jelly_beans, jars, crates #still not sure why you must return it?
 end
 
 start_point = 10000

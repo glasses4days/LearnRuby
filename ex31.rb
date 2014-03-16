@@ -15,8 +15,39 @@ if door == "1"
 
   if bear == "1"
     puts "The bear eats your face off. Good job!"
+    puts "You are now faceless. What do you do?"
+    puts "1. Die in a pool of your own faceblood."
+    puts "2. Feel your way out the room and hope that the bear doesn't take your legs too."
+
+    prompt; faceless = gets.chomp
+
+    if faceless == "1"
+      puts "Not much of a survival instinct, eh? Hope someone finds your body."
+    elsif faceless == "2"
+      puts "You find the door, but then the bear finds you, again. Good job!"
+    else
+      puts "You are bear food."
+    end
+
   elsif bear == "2"
     puts "The bear eats your legs off. Good job!"
+    puts "You are now the proud owner of bleeding stumps. What do you do?"
+    puts "1. Die in a pool of your own blood."
+    puts "2. Attempt to stop the bleeding via shirt tourniquet and try to get away."
+    puts "3. Crawl out with stumps still bleeding."
+
+    prompt; legless = gets.chomp
+
+    if legless == "1"
+      puts "Amazing grace, how sweet the sound..."
+    elsif legless == "2"
+      puts "Way to stop the bleed... Oh wait. The bear still gets you. Good job!"
+    elsif legless == "3"
+      puts "Way to persevere, but the bear still gets you. Good job!"
+    else
+      puts "Nice try, but you're probably not going to make it."
+    end
+
   else
     puts "Well, doing #{bear} is probably better. Bear runs away."
   end

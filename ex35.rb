@@ -2,25 +2,34 @@ def prompt()
   print "> "
 end
 
+#removed original code and replaced with what A helped with
 def gold_room()
   puts "This room is full of gold. How much do you take?"
 
   prompt; next_move = gets.chomp
-#took out the .include? method here
-  next_move.include?(["0", "1", "2", "3", "4"])
-  if how_much = next_move.to_i() #i=integer. so converts the string into an integer
-  else
-    dead("Man, learn to type a number.")
+
+  string_test = next_move.split(//) #uses split because otherwise can't count
+  # the characters in a string
+  if string_test[0] == "0" and string_test.length != 1 # uses [0] to check if the
+    #very first character in a string is 0
+    puts "Nice try faking a string"
+    Process.exit(0)
+  elsif string_test[0] == "0" and string_test.length == 1
+    puts "Good luck with that College Debt, Bitch"
+    Process.exit(0)
   end
 
-  if how_much < 50
+  how_much = next_move.to_i
+  #deals with the entering of a single letter, because the earlier tests won't catch it
+  if how_much == 0
+    dead("Man, learn to type a number.")
+  elsif how_much < 50
     puts "Nice, you're not too greedy, you win!"
     Process.exit(0)
   else
     dead("You greedy bastard!")
   end
 end
-
 
 def bear_room()
   puts "There is a bear here."
@@ -52,7 +61,7 @@ end
 def cthulhu_room()
   puts "Here you see the great evil Cthulhu."
   puts "He, it, whatever stares at you and you go insane."
-  puts "Do you flee for your life of eat your head?"
+  puts "Do you flee for your life or eat your head?"
 
   prompt; next_move = gets.chomp
 
